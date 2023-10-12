@@ -131,7 +131,7 @@ const App = () => {
           )}
 
         <button type="submit">
-          Add Note
+          Add Card
           </button>
         </form>
         <div 
