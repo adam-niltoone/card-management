@@ -72,25 +72,37 @@ const App = () => {
         id: selectedNote.id,
         title: title, 
         content: content,
-      }
+      } // updatedNotes
 
       const updatedNotesList = notes.map((note) => 
         note.id === selectedNote.id 
         ? updatedNotes 
         : note
-      )
+      ) // map
 
       setNotes(updatedNotesList);
       setTitle("");
       setContent("");
       setSelectedNote (null);
-    };
+    }; 
 
     const handleCancel = () => {
       setTitle("");
       setContent("");
       setSelectedNote (null);
-    }
+    } // handleCancel
+
+    const deleteNote =  (
+      event: React.MouseEvent,
+      noteId: number 
+    ) => {
+      event.stopPropagation(); // stop event bubbling
+
+      const updatedNotes = notes.filter(
+        (note) => note.id !== noteId
+      )
+      setNotes(updatedNotes);
+    };  // deleteNote
 
   return (
     <div className="app-container">
@@ -140,7 +152,12 @@ const App = () => {
             onClick={() => handleNoteClick(note)}
             >
             <div className="note-header">
-              <button>x
+              <button
+                onClick={(event) =>
+                  deleteNote (event, note.id)
+                }
+              >
+              x
               </button>
           </div>
           <h2>{note.title} </h2>
