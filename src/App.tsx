@@ -12,21 +12,21 @@ const App = () => {
     {
       id: 1,
       title: "Sprint 1",
-      content: "Content 1",
+      content: "Sprint 1 Content",
     },
     {
       id: 2,
-      title: "note title 2",
+      title: "Card title 2",
       content: "Content 2",
     },
     {
       id: 3,
-      title: "note title 3",
+      title: "Card title 3",
       content: "Content 3",
     },
     {
       id: 4,
-      title: "note title 4",
+      title: "Card title 4",
       content: "Content 4",
     },
   ]);
@@ -130,9 +130,7 @@ const App = () => {
            <button type="submit">Add Card</button>
           )}
 
-        <button type="submit">
-          Add Card
-          </button>
+        
         </form>
         <div 
           className="notes-grid">
@@ -142,7 +140,8 @@ const App = () => {
             onClick={() => handleNoteClick(note)}
             >
             <div className="note-header">
-              <button>x</button>
+              <button>x
+              </button>
           </div>
           <h2>{note.title} </h2>
           <p>{note.content}</p>
