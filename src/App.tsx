@@ -180,28 +180,30 @@ const App = () => {
 
         
         </form>
-        <div 
-          className="notes-grid">
-          {notes.map((note) => (
+        <div className="notes-container">
           <div 
-            className="note-item"
-            onClick={() => handleNoteClick(note)}
-            >
-            <div className="note-header">
-              <button
-                onClick={(event) =>
-                  deleteNote (event, note.id)
-                }
+            className="notes-grid">
+            {notes.map((note) => (
+            <div 
+              className="note-item"
+              onClick={() => handleNoteClick(note)}
               >
-              x
-              </button>
+              <div className="note-header">
+                <button
+                  onClick={(event) =>
+                    deleteNote (event, note.id)
+                  }
+                >
+                x
+                </button>
+            </div>
+            <h2>{note.title} </h2>
+            <p>{note.content}</p>
           </div>
-          <h2>{note.title} </h2>
-          <p>{note.content}</p>
-        </div>
-          ))}
+            ))}
       </div>
     </div>
+  </div>
   );
 };
 
