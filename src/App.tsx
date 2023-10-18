@@ -12,7 +12,6 @@ const App = () => {
 
   const[title, setTitle] = useState("");
   const[content, setContent] = useState("");
-
   const [selectedNote, setSelectedNote] = 
     useState<Note | null>(null);
 
@@ -176,9 +175,7 @@ const App = () => {
           </div>
         ) : (
            <button type="submit">Add Card</button>
-          )}
-
-        
+          )}    
         </form>
         <div className="notes-container">
           <div 
