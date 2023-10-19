@@ -172,12 +172,12 @@ const MainPageContent = () => {
           />
       {selectedNote ? (
         <div className="flex space-x-2">
-          <button type="submit" className="flex-1 bg-blue-500 text-white rounded p-2">
+          <button type="submit" className="flex-1 bg-blue-700 text-white rounded p-2">
             Save
           </button>
           <button
             onClick={handleCancel}
-            className="flex-1 bg-red-500 text-white rounded p-2"
+            className="flex-1 bg-red-600 text-white rounded p-2"
           >
             Cancel
           </button>
@@ -195,7 +195,7 @@ const MainPageContent = () => {
             onClick={() => setDropdownOpen(!dropdownOpen)}
         >
             Dropdown button 
-            <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <svg className="w-2.5 h-2.5 ml-9" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
             </svg>
         </button>
@@ -214,8 +214,6 @@ const MainPageContent = () => {
                 </li>    
             </ul>
         </div>
-
-
     </form>
     <div className="flex-1 overflow-y-auto bg-gray-200 p-3 mt-2 rounded-lg shadow">
       <div className="grid grid-cols-1 gap-10 overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
