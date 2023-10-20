@@ -9,7 +9,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainPageContent />} />
                 <Route path="/demo-drag-drop" element={<DragDropDemo />} />
-                {/* Add other routes as necessary */}
             </Routes>
         </Router>
     );
