@@ -1,4 +1,6 @@
 import "../App.css";
+import "./custom.css";
+
 import { useEffect, useState } from "react";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
@@ -14,9 +16,54 @@ const MainPageContent = () => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const [selectedNote, setSelectedNote] = useState<Note | null>(null);
+
+  const [draggedNote, setDraggedNote] = useState<Note | null>(null);
+
+  const [time, setTime] = useState<number>(0);
+
+  const handleDragStart = (e: React.DragEvent, note: Note) => {
+    setDraggedNote(note);
+    e.dataTransfer.effectAllowed = "move";
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  const handleDrop = (e: React.DragEvent, targetNote: Note) => {
+    e.preventDefault();
+
+    const targetIndex = notes.findIndex((note) => note.id === targetNote.id);
+    const draggedIndex = notes.findIndex(
+      (note) => note.id === (draggedNote?.id ?? -1)
+    );
+
+    if (targetIndex !== draggedIndex) {
+      const updatedNotes = [...notes];
+      [updatedNotes[targetIndex], updatedNotes[draggedIndex]] = [
+        updatedNotes[draggedIndex],
+        updatedNotes[targetIndex],
+      ];
+
+      setNotes(updatedNotes);
+    }
+
+    setDraggedNote(null);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime((prevTime) => prevTime + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchNotes = async () => {
@@ -152,6 +199,7 @@ const MainPageContent = () => {
               >
                 Save
               </button>
+
               <button
                 onClick={handleCancel}
                 className="flex-1 bg-red-600 text-white rounded p-2"
@@ -217,13 +265,22 @@ const MainPageContent = () => {
               </li>
             </ul>
           </div>
+
+          {/* Digital Clock Styled Timer */}
+          <div className="flex justify-center items-center bg-neutral-900 text-white text-4xl font-mono rounded-lg h-16 w-48 mb-2 border-4 glowing-border">
+            {time}s
+          </div>
         </form>
-        <div className="flex-2 overflow-y-auto bg-gray-200 p-3 mt-2 rounded-lg shadow">
+        <div className="flex-3 overflow-y-auto bg-gray-200 p-3 mt-2 rounded-lg shadow">
           <div className="grid grid-cols-1 gap-10 overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {notes.map((note) => (
               <div
                 className="flex flex-col border rounded-lg p-4 bg-white shadow hover:bg-yellow-200 transition cursor-pointer "
                 onClick={() => handleNoteClick(note)}
+                draggable={true} // add this attribute
+                onDragStart={(e) => handleDragStart(e, note)}
+                onDragOver={(e) => handleDragOver(e)}
+                onDrop={(e) => handleDrop(e, note)}
               >
                 <div className="flex justify-end">
                   <button

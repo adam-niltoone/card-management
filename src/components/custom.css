@@ -1,0 +1,33 @@
+.glowing-border {
+    /* Removed the previous glowing effect */
+    
+    /* Added radial gradient effect */
+    border: 0.35rem solid;
+    border-image: radial-gradient(ellipse at var(--gradX, 50%) var(--gradY, 50%), #1E90FF, transparent) 30;
+    animation: borderRadial var(--d, 2500ms) linear infinite forwards;
+  }
+  
+  /* Added new keyframes for radial gradient */
+  @keyframes borderRadial {
+    20% {
+      --gradX: 100%;
+      --gradY: 50%;
+    }
+    40% {
+      --gradX: 100%;
+      --gradY: 100%;
+    }
+    60% {
+      --gradX: 50%;
+      --gradY: 100%;
+    }
+    80% {
+      --gradX: 0%;
+      --gradY: 50%;
+    }
+    100% {
+      --gradX: 50%;
+      --gradY: 0%;
+    }
+  }
+  
