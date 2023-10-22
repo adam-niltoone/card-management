@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import "../App.css";
+import { useEffect, useState } from "react";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
 
@@ -222,7 +222,7 @@ const MainPageContent = () => {
           <div className="grid grid-cols-1 gap-10 overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {notes.map((note) => (
               <div
-                className="flex flex-col border rounded-lg p-4 bg-white shadow hover:bg-yellow-200 transition cursor-pointer"
+                className="flex flex-col border rounded-lg p-4 bg-white shadow hover:bg-yellow-200 transition cursor-pointer "
                 onClick={() => handleNoteClick(note)}
               >
                 <div className="flex justify-end">
