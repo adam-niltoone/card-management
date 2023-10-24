@@ -271,11 +271,11 @@ const MainPageContent = () => {
             {time}s
           </div>
         </form>
-        <div className="flex-3 overflow-y-auto bg-gray-200 p-3 mt-2 rounded-lg shadow">
+        <div className="flex-3 overflow-y-auto bg-gray-200 p-3 mt-2 rounded-lg shadow lg:flex-auto">
           <div className="grid grid-cols-1 gap-10 overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {notes.map((note) => (
               <div
-                className="flex flex-col border rounded-lg p-4 bg-white shadow hover:bg-yellow-200 transition cursor-pointer "
+                className="flex flex-col border rounded-lg p-4 bg-white shadow hover:bg-yellow-300 transition cursor-pointer "
                 onClick={() => handleNoteClick(note)}
                 draggable={true} // add this attribute
                 onDragStart={(e) => handleDragStart(e, note)}
