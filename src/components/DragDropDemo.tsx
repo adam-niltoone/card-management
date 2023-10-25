@@ -9,6 +9,8 @@ const KanbanBoard = () => {
     { id: 4, title: "Task 4", status: "In Progress" },
     { id: 5, title: "Task 5", status: "Done" },
     { id: 6, title: "Task 6", status: "Done" },
+    { id: 7, title: "Daren", status: "Done" },
+    { id: 8, title: "Daren2", status: "Done" },
   ]);
 
   const handleDragStart = (event: React.DragEvent<HTMLLIElement>) => {
