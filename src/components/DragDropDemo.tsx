@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const KanbanBoard = () => {
   const [tasks, setTasks] = useState([
-    { id: 1, title: "Task 1", status: "To Do" },
-    { id: 2, title: "Task 2", status: "To Do" },
-    { id: 3, title: "Task 3", status: "In Progress" },
+    // { id: 1, title: "Task 1", status: "To Do" },
+    // { id: 2, title: "Task 2", status: "To Do" },
+    // { id: 3, title: "Task 3", status: "In Progress" },
     { id: 4, title: "Task 4", status: "In Progress" },
     { id: 5, title: "Task 5", status: "Done" },
     { id: 6, title: "Task 6", status: "Done" },
