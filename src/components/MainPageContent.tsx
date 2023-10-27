@@ -217,7 +217,7 @@ const MainPageContent = () => {
           )}
 
           {/* Dropdown button */}
-          <button
+          {/* <button
             className="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -237,10 +237,10 @@ const MainPageContent = () => {
                 strokeWidth="2"
                 d="m1 1 4 4 4-4"
               />
-            </svg>
-          </button>
+            </svg> */}
+          {/* </button> */}
           {/* Dropdown menu */}
-          <div
+          {/* <div
             className={`z-10 ${
               dropdownOpen ? "block" : "hidden"
             } bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 mt-2`}
@@ -264,7 +264,7 @@ const MainPageContent = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Digital Clock Styled Timer */}
           <div className="flex justify-center items-center bg-neutral-900 text-white text-4xl font-mono rounded-lg h-16 w-48 mb-2 border-4 glowing-border">
