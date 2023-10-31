@@ -36,7 +36,7 @@ jobs:
     - name: Run Python script
       run: python .github/scripts/update_readme.py
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ github.repository }}
 
     - name: Commit and push if changes
@@ -46,7 +46,7 @@ jobs:
         git add README.md
         if git diff --staged | grep "README.md"; then
           git commit -m "Update README with Unresolved Issues"
-          git push
+          git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         else
           echo "No changes to README.md"
         fi
