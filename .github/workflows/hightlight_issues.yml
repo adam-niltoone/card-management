@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+   
+    - name: Check Environment Variables
+      run: |
+        echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
