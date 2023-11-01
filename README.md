@@ -32,7 +32,8 @@ These instructions will get you a copy of the project up and running on your loc
     npm start
     ```
 
-## Pull Request Cheat SHeet
+## Creating a New Branch and Commiting new change
+
 
 For full details on how to do a Pull Request, do visit [PR guide](https://github.com/firstcontributions/first-contributions)
 
