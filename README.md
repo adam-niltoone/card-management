@@ -1,11 +1,11 @@
 ## Highlighted Issues for the Week/Month
-
-List of hIghlighted issues here shall be updated daily
-
-# Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
+- [When is the next release on this project?](https://github.com/adam-niltoone/card-management/issues/21)
+- [Enhancement: Drag and Drop feature for the notes in the home page.](https://github.com/adam-niltoone/card-management/issues/20)
+- [Enhancement: Add Dropdown Menu in the home page](https://github.com/adam-niltoone/card-management/issues/19)
+- [Docs: Update API documentation](https://github.com/adam-niltoone/card-management/issues/18)
+- [Enhancement: Improved card search](https://github.com/adam-niltoone/card-management/issues/17)
+- [Feature Request: Multi-card selection](https://github.com/adam-niltoone/card-management/issues/16)
+- [Card deletion not working](https://github.com/adam-niltoone/card-management/issues/15)
 ## Prerequisites
 
 - Node.js (v14 or newer)
