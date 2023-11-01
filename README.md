@@ -54,7 +54,7 @@ git commit -m "<Your commit message here>"
 
 -Push changes
 ```bash
-git push -u origin <zyour-branch-name>
+git push -u origin <your-branch-name>
 ```
 
 -Pull Request
