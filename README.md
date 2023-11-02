@@ -5,7 +5,6 @@
 - [Docs: Update API documentation](https://github.com/adam-niltoone/card-management/issues/18)
 - [Enhancement: Improved card search](https://github.com/adam-niltoone/card-management/issues/17)
 - [Feature Request: Multi-card selection](https://github.com/adam-niltoone/card-management/issues/16)
-- [Card deletion not working](https://github.com/adam-niltoone/card-management/issues/15)
 ## Prerequisites
 
 - Node.js (v14 or newer)
